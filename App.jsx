@@ -14,7 +14,8 @@ function App() {
       <input
         type="number"
         value={cantidad}
-        onChange={(e) => setCantidad(e.target.value)}
+        onChange={(e) => setCantidad(Number(e.target.value) || 0)}
+        min="1"
       />
 
       <TarjetaProducto cantidad={cantidad} />
