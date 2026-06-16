@@ -1,8 +1,8 @@
 function Encabezado() {
   return (
-    <header>
-      <h1>Tienda Online</h1>
-      <p>Compra de productos</p>
+    <header className="encabezado">
+      <h1>Tienda Digital</h1>
+      <p>¡Tecnología al alcance de todos!</p>
     </header>
   );
 }

@@ -1,19 +1,18 @@
 function TarjetaProducto({ cantidad }) {
-  const nombre = "Zapatillas deportivas";
-  const precio = 45990;
-  const imagen =
-    "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=260&h=260&fit=crop";
+  const nombre = "Audífonos";
+  const precio = 12000;
+  const imagen = "/audifonos.jpg";
   const total = Number(cantidad) * precio;
+
+  const formatoPrecio = (valor) => `$${valor.toLocaleString("es-CL")}`;
 
   return (
     <div className="tarjeta">
       <img src={imagen} alt={nombre} />
       <h2>{nombre}</h2>
-      <p>Precio unitario: ${precio.toLocaleString("es-CL")}</p>
+      <p>Precio: {formatoPrecio(precio)}</p>
       <p>Cantidad: {cantidad}</p>
-      <p>
-        <strong>Total: ${total.toLocaleString("es-CL")}</strong>
-      </p>
+      <p className="total">Total a pagar: {formatoPrecio(total)}</p>
     </div>
   );
 }

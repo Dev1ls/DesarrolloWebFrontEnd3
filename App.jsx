@@ -4,19 +4,21 @@ import TarjetaProducto from "./TarjetaProducto";
 import "./App.css";
 
 function App() {
-  const [cantidad, setCantidad] = useState(1);
+  const [cantidad, setCantidad] = useState(3);
 
   return (
     <div className="app">
       <Encabezado />
 
-      <p>Cantidad:</p>
-      <input
-        type="number"
-        value={cantidad}
-        onChange={(e) => setCantidad(Number(e.target.value) || 0)}
-        min="1"
-      />
+      <p className="cantidad-input">
+        Cantidad:{" "}
+        <input
+          type="number"
+          value={cantidad}
+          onChange={(e) => setCantidad(Number(e.target.value) || 0)}
+          min="1"
+        />
+      </p>
 
       <TarjetaProducto cantidad={cantidad} />
     </div>
